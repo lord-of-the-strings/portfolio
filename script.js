@@ -4,7 +4,7 @@ const DATA = {
   tagline: "Computer Science Generalist // Retro Computing Enthusiast",
 
   about: {
-    heading: "ABOUT.DAT",
+    heading: "ABOUT",
     body: `<p>Hello weary traveller! You have entered an area of the internet owned by @lord-of-the-strings, that is, me!</p>
     <p> I am Aadity Setu, a 19 year old computer science generalist with a keen interest in systems software and algorithms.
 <p>I care about software that's fast, small, and doesn't waste anyone's
@@ -15,7 +15,7 @@ Currently a learner who is open to and enthusiastic about open source projects a
   },
 
   skills: {
-    heading: "SKILLS.SYS",
+    heading: "SKILLS",
     items: [
       { name: "C", level: 9 },
       { name: "C++",     level: 6 },
@@ -28,7 +28,7 @@ Currently a learner who is open to and enthusiastic about open source projects a
   },
 
   projects: {
-    heading: "PROJECTS.EXE",
+    heading: "PROJECTS",
     items: [
       {
         title: "Project-Micro",
@@ -53,7 +53,7 @@ Currently a learner who is open to and enthusiastic about open source projects a
   },
 
   contact: {
-    heading: "CONTACT.COM",
+    heading: "CONTACT",
     rows: [
       { label: "EMAIL:",    value: "aaditysetu@gmail.com", href: "mailto:aaditysetu@gmail.com" },
       { label: "GITHUB:",   value: "github.com/lord-of-the-strings", href: "github.com/lord-of-the-strings" },
