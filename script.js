@@ -4,18 +4,17 @@ const DATA = {
   tagline: "Computer Science Generalist // Retro Computing Enthusiast",
 
   about: {
-    heading: "ABOUT",
+    heading: "ABOUT.DAT",
     body: `<p>Hello weary traveller! You have entered an area of the internet owned by @lord-of-the-strings, that is, me!</p>
     <p> I am Aadity Setu, a 19 year old computer science generalist with a keen interest in systems software and algorithms.
-<p>I care about software that's fast, small, and doesn't waste anyone's
-time — including the person who has to maintain it later. This site is
-built on that same idea: no frameworks, no build step, just files.</p>
+<p>I care about software that's fast, small, and doesn't waste anyone's time. This portfolio website has been
+built on that same idea: no frameworks, no build step, just HTML/CSS/JS files.</p>
 <p>Based in <span style="color:var(--yellow)">Ranchi, India</span>.
 Currently a learner who is open to and enthusiastic about open source projects and work.</p>`
   },
 
   skills: {
-    heading: "SKILLS",
+    heading: "SKILLS.SYS",
     items: [
       { name: "C", level: 9 },
       { name: "C++",     level: 6 },
@@ -28,7 +27,7 @@ Currently a learner who is open to and enthusiastic about open source projects a
   },
 
   projects: {
-    heading: "PROJECTS",
+    heading: "PROJECTS.EXE",
     items: [
       {
         title: "Project-Micro",
@@ -53,7 +52,7 @@ Currently a learner who is open to and enthusiastic about open source projects a
   },
 
   contact: {
-    heading: "CONTACT",
+    heading: "CONTACT.COM",
     rows: [
       { label: "EMAIL:",    value: "aaditysetu@gmail.com", href: "mailto:aaditysetu@gmail.com" },
       { label: "GITHUB:",   value: "github.com/lord-of-the-strings", href: "github.com/lord-of-the-strings" },
@@ -63,22 +62,21 @@ Currently a learner who is open to and enthusiastic about open source projects a
 
 
 const ASCII_TITLE = `
-
-██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗
-██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
-██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
-██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
-██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
-╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝
+██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗  ██████╗ 
+██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║ ██╔═══██╗
+██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║ ██║   ██║
+██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║ ██║   ██║
+██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║ ╚██████╔╝
+╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═════╝ 
 `;
 
 document.getElementById('ascii-title').textContent = ASCII_TITLE;
 
 const menuDefs = [
-  { key: 'about',    file: 'ABOUT',    render: renderAbout },
-  { key: 'skills',   file: 'SKILLS',   render: renderSkills },
-  { key: 'projects', file: 'PROJECTS', render: renderProjects },
-  { key: 'contact',  file: 'CONTACT',  render: renderContact },
+  { key: 'about',    file: 'ABOUT.DAT',    render: renderAbout },
+  { key: 'skills',   file: 'SKILLS.SYS',   render: renderSkills },
+  { key: 'projects', file: 'PROJECTS.EXE', render: renderProjects },
+  { key: 'contact',  file: 'CONTACT.COM',  render: renderContact },
 ];
 
 let activeIndex = 0;
