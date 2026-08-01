@@ -32,21 +32,22 @@ Currently a learner who is open to and enthusiastic about open source projects a
       {
         title: "Project-Micro",
         detail: "My experimentation with making a tiny linux distro that boots from a floppy on an i386 PC",
-        link: "github.com/lord-of-the-strings/Project-Micro"
+        link: "https://github.com/lord-of-the-strings/Project-Micro"
       },
       {
         title: "Parallel Gradient Descent",
         detail: "An unnnecessarily over-engineered experimentation with parallelism and memory corruption in pure C with some GNU stuff. The learning rate is stored in .text section of the code itself which it self-patches and spawns a stunning number of workers for mundane tasks that hardly justify the overhead.",
-        link: "github.com/lord-of-the-strings/Parallel-Gradient-Descent"
+        link: "https://github.com/lord-of-the-strings/Parallel-Gradient-Descent"
       },
       {
         title: "htype",
         detail: "A bot that mimics the behaviour of a human typist. This project inspired clack by @ThisWasAryan.",
-        link: "github.com/lord-of-the-strings/htype"
+        link: "https://github.com/lord-of-the-strings/htype"
       },
       {
          title: "bookstore",
-         detail: "An online marketplace for second hand books currently under development. A Flutter-SpringBoot-PostgreSQL project."
+        detail: "An online marketplace for second hand books currently under development. A Flutter-SpringBoot-PostgreSQL project.",
+         link: "https://github.com/lord-of-the-strings/bookstore"
       },
     ]
   },
@@ -55,7 +56,7 @@ Currently a learner who is open to and enthusiastic about open source projects a
     heading: "CONTACT.COM",
     rows: [
       { label: "EMAIL:",    value: "aaditysetu@gmail.com", href: "mailto:aaditysetu@gmail.com" },
-      { label: "GITHUB:",   value: "github.com/lord-of-the-strings", href: "github.com/lord-of-the-strings" },
+      { label: "GITHUB:",   value: "github.com/lord-of-the-strings", href: "https://github.com/lord-of-the-strings" },
     ]
   }
 };
