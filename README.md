@@ -18,3 +18,5 @@ python3 -m http.server 8080 # or any port
 ```
 
 Then visit http://localhost:8080 or your port on any browser. This will be deployed once complete; this is mainly a fast deployment focussed initiative.
+
+The project has been deployed at  [cloudflare pages](https://portfolio.shibu-richi-masco.workers.dev).
