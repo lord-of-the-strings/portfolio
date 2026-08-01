@@ -2,7 +2,8 @@
 
 This site is being designed with a retro computing inspired look. This is a minimal site that avoids unnecessary complications and heavy frameworks to take visitors back to the age of simplicity, ease-of-use and speed.
 
-<img width="1918" height="1043" alt="image" src="https://github.com/user-attachments/assets/732a5630-339b-46c6-8c28-07569984e916" />
+<img width="1916" height="1048" alt="image" src="https://github.com/user-attachments/assets/d500f0b4-83b2-423d-bd0a-ae02f7e5714b" />
+
 
 
 First looks  
