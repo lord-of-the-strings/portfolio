@@ -75,10 +75,10 @@ const ASCII_TITLE = `
 document.getElementById('ascii-title').textContent = ASCII_TITLE;
 
 const menuDefs = [
-  { key: 'about',    file: 'ABOUT.DAT',    render: renderAbout },
-  { key: 'skills',   file: 'SKILLS.SYS',   render: renderSkills },
-  { key: 'projects', file: 'PROJECTS.EXE', render: renderProjects },
-  { key: 'contact',  file: 'CONTACT.COM',  render: renderContact },
+  { key: 'about',    file: 'ABOUT',    render: renderAbout },
+  { key: 'skills',   file: 'SKILLS',   render: renderSkills },
+  { key: 'projects', file: 'PROJECTS', render: renderProjects },
+  { key: 'contact',  file: 'CONTACT',  render: renderContact },
 ];
 
 let activeIndex = 0;
@@ -158,17 +158,16 @@ function renderContact(){
 /* keyboard navigation */
 document.addEventListener('keydown', (e) => {
   if (document.getElementById('boot') && !document.getElementById('boot').classList.contains('hidden')) return;
-  if (e.key === 'ArrowDown'){ e.preventDefault(); activeIndex = (activeIndex+1) % menuDefs.length; updateMenuHighlight(); }
-  if (e.key === 'ArrowUp'){ e.preventDefault(); activeIndex = (activeIndex-1+menuDefs.length) % menuDefs.length; updateMenuHighlight(); }
+  if (e.key === 'ArrowDown' || e.key==='j'){ e.preventDefault(); activeIndex = (activeIndex+1) % menuDefs.length; updateMenuHighlight(); }
+  if (e.key === 'ArrowUp' || e.key==='k'){ e.preventDefault(); activeIndex = (activeIndex-1+menuDefs.length) % menuDefs.length; updateMenuHighlight(); }
   if (e.key === 'Enter'){ menuDefs[activeIndex].render(); }
 });
 
 /* boot sequence */
 const bootLines = [
-  "PORTFOLIO-BIOS v2.3  (C) 1990",
+  "PORTFOLIO-BIOS",
   "",
   `MAIN PROCESSOR: ${DATA.name}`,
-  "MEMORY TEST : 640K OK",
   "",
   "Loading PORTFOLIO.EXE ...",
   "Mounting ABOUT.DAT ... OK",
