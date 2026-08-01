@@ -62,21 +62,21 @@ Currently a learner who is open to and enthusiastic about open source projects a
 
 
 const ASCII_TITLE = `
-██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗  ██████╗ 
+██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗  ██████╗
 ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║ ██╔═══██╗
 ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║ ██║   ██║
 ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║ ██║   ██║
 ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║ ╚██████╔╝
-╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═════╝ 
+╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═════╝
 `;
 
 document.getElementById('ascii-title').textContent = ASCII_TITLE;
 
 const menuDefs = [
-  { key: 'about',    file: 'ABOUT.DAT',    render: renderAbout },
-  { key: 'skills',   file: 'SKILLS.SYS',   render: renderSkills },
-  { key: 'projects', file: 'PROJECTS.EXE', render: renderProjects },
-  { key: 'contact',  file: 'CONTACT.COM',  render: renderContact },
+  { key: 'about',    file: 'ABOUT',    render: renderAbout },
+  { key: 'skills',   file: 'SKILLS',   render: renderSkills },
+  { key: 'projects', file: 'PROJECTS', render: renderProjects },
+  { key: 'contact',  file: 'CONTACT',  render: renderContact },
 ];
 
 let activeIndex = 0;
