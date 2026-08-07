@@ -5,10 +5,10 @@ const DATA = {
 
   about: {
     heading: "ABOUT.DAT",
-    body: `<p>Hello weary traveller! You have entered an area of the internet owned by @lord-of-the-strings, that is, me!</p>
+    body: `<p>Hello weary traveller! You have entered an area of the internet inhabited by @lord-of-the-strings, that is, me!</p>
     <p> I am Aadity Setu, a 19 year old computer science generalist with a keen interest in systems software and algorithms.
-<p>I care about software that's fast, small, and doesn't waste anyone's time. This portfolio website has been
-built on that same idea: no frameworks, no build step, just HTML/CSS/JS files.</p>
+<p>I care about software that is efficient, minimal, and does not waste anyone's time. This portfolio website has been
+built on that same idea: no frameworks, no elaborate RSS feeds and guestbooks, no build step, just HTML/CSS/JS files.</p>
 <p>Based in <span style="color:var(--yellow)">Ranchi, India</span>.
 Currently a learner who is open to and enthusiastic about open source projects and work.</p>`
   },
@@ -58,6 +58,25 @@ Currently a learner who is open to and enthusiastic about open source projects a
       { label: "EMAIL:",    value: "aaditysetu@gmail.com", href: "mailto:aaditysetu@gmail.com" },
       { label: "GITHUB:",   value: "github.com/lord-of-the-strings", href: "https://github.com/lord-of-the-strings" },
     ]
+  },
+
+  help: {
+    heading: "HELP.HLP",
+    body:
+    `
+    <p> Welcome to the system help and navigation utility.</p>
+    <pre style="color:var(--gray); background:rgba(255,255,255,0.05); padding:10px; border-radius:4px;">
+   ┌──────────────────────────────────────┐
+   │ SYSTEM SHORTCUTS                     │
+   ├──────────────────────────────────────┤
+   │ Arrow Up / k   : Move Selection Up   │
+   │ Arrow Down / j : Move Selection Down │
+   │ Enter          : Open Selected File  │
+   │ F1             : Jump To This Screen │
+   └──────────────────────────────────────┘
+       </pre>
+    Contact @lord-of-the-strings on github in case of difficulty.
+    `
   }
 };
 
@@ -77,7 +96,8 @@ const menuDefs = [
   { key: 'about',    file: 'ABOUT',    render: renderAbout },
   { key: 'skills',   file: 'SKILLS',   render: renderSkills },
   { key: 'projects', file: 'PROJECTS', render: renderProjects },
-  { key: 'contact',  file: 'CONTACT',  render: renderContact },
+  { key: 'contact', file: 'CONTACT', render: renderContact },
+  { key: 'help', file: 'HELP', render: renderHelp},
 ];
 
 let activeIndex = 0;
@@ -116,6 +136,11 @@ function bar(level, max=10){
 function renderAbout(){
   document.getElementById('content-heading').textContent = DATA.about.heading;
   document.getElementById('content-body').innerHTML = DATA.about.body;
+}
+
+function renderHelp() {
+  document.getElementById('content-heading').textContent = DATA.help.heading;
+  document.getElementById('content-body').innerHTML = DATA.help.body;
 }
 
 function renderSkills(){
@@ -159,7 +184,13 @@ document.addEventListener('keydown', (e) => {
   if (document.getElementById('boot') && !document.getElementById('boot').classList.contains('hidden')) return;
   if (e.key === 'ArrowDown' || e.key==='j'){ e.preventDefault(); activeIndex = (activeIndex+1) % menuDefs.length; updateMenuHighlight(); }
   if (e.key === 'ArrowUp' || e.key==='k'){ e.preventDefault(); activeIndex = (activeIndex-1+menuDefs.length) % menuDefs.length; updateMenuHighlight(); }
-  if (e.key === 'Enter'){ menuDefs[activeIndex].render(); }
+  if (e.key === 'Enter') { menuDefs[activeIndex].render(); }
+  if (e.key === 'F1') {
+    e.preventDefault();
+    const helpIndex = menuDefs.findIndex(item => item.key == 'help');
+    if (helpIndex != -1)
+      selectMenu(helpIndex);
+  }
 });
 
 /* boot sequence */
